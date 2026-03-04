@@ -22,7 +22,7 @@ stages {
         }
     }
 
-    stage('Run Containers using Docker Compose') {
+    stage('Run Docker Compose') {
         steps {
             sh 'docker compose down || true'
             sh 'docker compose up -d --build'
