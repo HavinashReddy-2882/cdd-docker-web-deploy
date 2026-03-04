@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+  --primary: #a4d3ee;
+  --secondary: #feb47b;
+  --surface: #fff;
+  --background: #f7f7f9;
+  --text-main: #20232a;
+  --border: #eaeaea;
+  --success: #8fd19e;
+  --error: #ff7675;
+  --accent: #4636ff;
+  --font: 'Montserrat', sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-main);
+  font-family: var(--font);
+  margin: 0;
+  padding: 2rem;
+}
+
+.book-container {
+  max-width: 960px;
+  margin: 30px auto;
+  background: var(--surface);
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(164, 211, 238, 0.18);
+}
+
+h2, h3 {
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+input {
+  background: var(--background);
+  border: 2px solid var(--border);
+  color: var(--text-main);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+input:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.btn-group {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.8rem;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-blue { background: linear-gradient(90deg, var(--primary), var(--accent)); color: white; }
+.btn-green { background: var(--success); color: #20232a; }
+.btn-red { background: var(--error); color: white; }
+.btn-gray { background: #d1d1d1; color: #20232a; }
+
+.message-banner {
+  margin-bottom: 1rem;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  animation: slideDown 0.5s ease;
+}
+@keyframes slideDown { from{opacity:0;transform:translateY(-10px);} to{opacity:1;transform:translateY(0);} }
+.message-banner.success { background: var(--success); }
+.message-banner.error { background: var(--error); color: white; }
+
+.book-card {
+  background: linear-gradient(105deg, #e0eafc, #cfdef3);
+  border-radius: 14px;
+  padding: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 2px 8px #a4d3ee55;
+}
+
+.table-wrapper { overflow-x: auto; } 
+table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+th, td { padding: 10px; border-bottom: 1px solid var(--border); text-align: left; }
+tbody tr:nth-child(even) { background: #f8fbfc; }
+
+.action-buttons { display: flex; gap: 0.4rem; }
