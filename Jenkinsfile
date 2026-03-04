@@ -1,14 +1,8 @@
 pipeline {
 agent any
 
-```
-stages {
 
-    stage('Clone Repository') {
-        steps {
-            git 'https://github.com/HavinashReddy-2882/cdd-docker-web-deploy.git'
-        }
-    }
+stages {
 
     stage('Build Backend Image') {
         steps {
@@ -30,6 +24,6 @@ stages {
     }
 
 }
-```
+
 
 }
